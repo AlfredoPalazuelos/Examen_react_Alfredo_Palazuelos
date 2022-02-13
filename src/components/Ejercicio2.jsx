@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, Container, Nav, NavDropdown,Offcanvas,Form, FormControl,Button} from 'react-bootstrap';
+import FormularioEj2 from './FormularioEj2';
 
 class Ejercicio2 extends React.Component {
   constructor(props) {
@@ -35,26 +35,8 @@ class Ejercicio2 extends React.Component {
             </li>
           </li>
         </ul>
-        <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
-          </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
+        <FormularioEj2 />
       </div>
     );
   }
