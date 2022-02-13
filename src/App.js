@@ -1,14 +1,24 @@
 import React from 'react';
 import './style.css';
-import Navbar from './components/Navbar';
+import NavbarHeader from './components/NavbarHeader';
 import Ejercicio1 from './components/Ejercicio1';
 import Ejercicio2 from './components/Ejercicio2';
 import Ejercicio3 from './components/Ejercicio3';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { MenuElements } from './data/MenuElements';
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      
+      <Router>
+      <NavbarHeader />
+      {MenuElements.map((item) => {
+        return (
+          <Route key={item.id} path={item.path} exact component={item.component} />
+        );
+      })}
+    </Router>
       <h1>Desarrollo de Interfaces: Examen React.js </h1>
       <p>
         Resuelve los ejercicios propuestos en los distintos apartados de la
